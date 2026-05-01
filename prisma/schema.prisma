@@ -24,7 +24,7 @@ model User {
   updatedAt DateTime @updatedAt
 
   bio String?
-  enxperience Int?
+  experience Int?
   skills String[]
 
   assessment Assessment[]
@@ -78,10 +78,10 @@ model IndustryInsight {
   salaryRange Json[]
 
   growthRate Float
-  demandLevel DemandLevel
+  demandLevel String
   topSkills String[]
 
-  marketOutlook MarketOutlook
+  marketOutlook String
   keyTrends String[]
 
   recommendedSkills String[]
@@ -90,16 +90,4 @@ model IndustryInsight {
   nextUpdate DateTime
 
   @@index([industry])
-}
-
-enum DemandLevel {
-  LOW
-  MEDIUM
-  HIGH
-}
-
-enum MarketOutlook {
-  POSITIVE
-  NEUTRAL
-  NEGATIVE
 }
